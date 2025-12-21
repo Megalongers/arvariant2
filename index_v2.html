@@ -66,39 +66,38 @@
         <p><strong>Pinch to scale</strong></p>
     </div>
 
-    <model-viewer
-        src="ujicoba_prototipe_2_ar.glb"
+   <model-viewer
+    src="ujicoba_prototype_2_ar.glb"
 
-        ar
-        ar-modes="webxr scene-viewer quick-look"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    ar-scale="fixed"
 
-        camera-controls
-        disable-pan
-        disable-tap
+    camera-controls
+    interaction-policy="allow-when-focused"
 
-        min-camera-orbit="auto 60deg 2m"
-        max-camera-orbit="auto 60deg 2m"
+    camera-orbit="0deg 75deg 0.35m"
+    min-camera-orbit="-30deg 60deg 0.25m"
+    max-camera-orbit="30deg 85deg 0.45m"
 
-        shadow-intensity="1"
-        environment-image="neutral"
-        exposure="1"
+    field-of-view="30deg"
 
-        interaction-policy="allow-when-focused"
-    >
-
-        <button slot="ar-button" style="
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 14px 26px;
-            border-radius: 8px;
-            font-size: 17px;
-            cursor: pointer;
-            margin: 10px;">
-            View in AR
-        </button>
-
-    </model-viewer>
+    shadow-intensity="1"
+    environment-image="neutral"
+    exposure="1"
+>
+    <button slot="ar-button" style="
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 14px 26px;
+        border-radius: 8px;
+        font-size: 17px;
+        cursor: pointer;
+        margin: 10px;">
+        View in AR
+    </button>
+</model-viewer>
 
     <div class="instructions">
         <p>This work is optimized for a fixed viewing orientation.</p>
@@ -107,3 +106,4 @@
 
 </body>
 </html>
+
